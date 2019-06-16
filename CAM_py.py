@@ -34,7 +34,7 @@ def get_CAM( model, image_path, image_class):
 
     #Get the 512 input weights to the softmax.
     class_weights = model.layers[-1].get_weights()[0]
-    #print(class_weights.shape)
+    print(class_weights.shape)
     #print(type(class_weights))
     #print(class_weights)
 
@@ -44,11 +44,15 @@ def get_CAM( model, image_path, image_class):
     #print(layer_dict)
 
     #final_conv_layer = layer_dict["activation_6"]
-    final_conv_layer = layer_dict["vgg16"]
-    #print(final_conv_layer)
+    final_conv_layer = layer_dict["activation_36"]
+    #print(final_conv_layer.shape)
 
     get_output = K.function([model.layers[0].input], [final_conv_layer.output, model.layers[-1].output])
     [conv_outputs, predictions] = get_output([img])
+    for key,value in classes.items() :
+        if value == np.argmax(predictions):
+            print(key)
+            #image_class = key
     '''
     print(conv_outputs.shape)
     print(type(conv_outputs))
@@ -79,9 +83,7 @@ def get_CAM( model, image_path, image_class):
         cam += w * conv_outputs[i, :, :]
         
     print("predictions", predictions)
-    for key,value in classes.items() :
-        if value == np.argmax(predictions):
-            print(key)
+    
     cam /= np.max(cam)
     cam = cv2.resize(cam, (height, width))
     #cam_gray = cv2.cvtColor(cam , cv2.COLOR_BGR2GRAY)
@@ -89,7 +91,7 @@ def get_CAM( model, image_path, image_class):
     heatmap = cv2.applyColorMap(np.uint8(255*cam), cv2.COLORMAP_JET)
     #print(heatmap.shape)
     #print(heatmap)
-    heatmap[np.where(cam < 0.2)] = 0
+    heatmap[np.where(cam < 0.4)] = 0
     cv2.imshow('heat map',heatmap)
     #img = heatmap*0.5 + original_img
     cv2.imshow('orignal image',original_img_copy)

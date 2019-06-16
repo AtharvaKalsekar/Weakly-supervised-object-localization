@@ -1,7 +1,7 @@
 from keras.models import load_model
 import cv2
 import numpy as np
-from CAM_py import get_CAM
+from CAM import get_CAM
 from B_BOX import get_bbox
 
 

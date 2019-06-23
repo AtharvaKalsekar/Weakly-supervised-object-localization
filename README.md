@@ -26,5 +26,6 @@ In this project a convolutional neural network is trained to classify and locali
     `|---->test/truck/...(truck images).`
 
 *Note : There are some images which are different but have the same name in the given dataset.*
-5. Run `renamer.sh` to rename the images in dataset appropriately.
-6. Now the data is ready for the use.
+
+7. Run `renamer.sh` to rename the images in dataset appropriately.
+8. Now the data is ready for the use.

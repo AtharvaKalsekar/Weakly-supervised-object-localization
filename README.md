@@ -5,27 +5,37 @@ In this project a convolutional neural network is trained to classify and locali
 #### Preparing the dataset
 1. The dataset is downloaded from [here](https://pjreddie.com/projects/cifar-10-dataset-mirror/)
 2. Extract the files and then you will get the following file structure :
-    `cifar/`
-     `|------> train/...(images)`
-    `|------> test/...(images)`
+```
+|-- cifar
+|	|-- train
+|	|	|-- airplane_1.jpg
+|	|	|-- horse_1.jpg
+|	|	|-- ...(all images mixed)
+|	|-- test
+|	|	|-- dog_1.jpg
+|	|	|-- ship_1.jpg
+|	|	|-- ...(all images mixed)
+```
 3. Create new folders named after the image classes in cifar-10 dataset i.e. Airplane, Automobile, cat,....., truck and copy the respectvie images from train folder to these folders accordingly.
 4. Repeat the same process for test folder as well by creating new class folders again.
-5. After following steps 3 and 4 the directory strucutre should look like this :
-    `cifar/`
-    `|---->train/Airplane/...(airplane images).`
-    `|---->train/Automobile/...(automobile images).`
-    `.`
-    `.`
-    `.`
-    `|---->train/truck/...(truck images).`
-    `|---->test/Airplane/...(airplane images).`
-    `|---->test/Automobile/...(automobile images).`
-    `.`
-    `.`
-    `.`
-    `|---->test/truck/...(truck images).`
-
-*Note : There are some images which are different but have the same name in the given dataset.*
-
-7. Run `renamer.sh` to rename the images in dataset appropriately.
-8. Now the data is ready for the use.
+5. After following steps 3 and 4 the directory structure should look like this :
+```
+|-- cifar
+│   |-- train
+│   │   |-- Airplane
+|	|	|	|-- airplane_1.jpg
+|	|	|	|-- ...
+|	|	|	|-- airplane_n.jpg 
+|	|	| -- ...
+|	|	|-- Truck
+|	|	|	|-- Truck_1.jpg
+|	|	|	|-- ...
+|	|	|	|-- Truck_n.jpg
+│   |-- test
+│   │   |-- Airplane
+|	|	|	|-- airplane1.jpg
+|	|	|	|-- same as the "train" folder.
+```
+>***Note** : There are some images which are different but have the same name in the given dataset.*
+5. Run `renamer.sh` to rename the images in dataset appropriately.
+6. Now the data is ready for the use.

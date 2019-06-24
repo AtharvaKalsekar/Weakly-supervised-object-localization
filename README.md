@@ -21,18 +21,18 @@ In this project a convolutional neural network is trained to classify and locali
 5. After following steps 3 and 4 the directory structure should look like this :
 ```
 |-- cifar
-│   |-- train
-│   │   |-- Airplane
+|	|-- train
+│	│	|-- Airplane
 |	|	|	|-- airplane_1.jpg
 |	|	|	|-- ...
 |	|	|	|-- airplane_n.jpg 
-|	|	| -- ...
+|	|	|-- ...
 |	|	|-- Truck
 |	|	|	|-- Truck_1.jpg
 |	|	|	|-- ...
 |	|	|	|-- Truck_n.jpg
-│   |-- test
-│   │   |-- Airplane
+│	|-- test
+│	│	|-- Airplane
 |	|	|	|-- airplane1.jpg
 |	|	|	|-- same as the "train" folder.
 ```

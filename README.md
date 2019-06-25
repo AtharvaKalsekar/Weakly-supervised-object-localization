@@ -16,26 +16,51 @@ In this project a convolutional neural network is trained to classify and locali
 |	|	|-- ship_1.jpg
 |	|	|-- ...(all images mixed)
 ```
-3. Create new folders named after the image classes in cifar-10 dataset i.e. Airplane, Automobile, cat,....., truck and copy the respectvie images from train folder to these folders accordingly.
-4. Repeat the same process for test folder as well by creating new class folders again.
-5. After following steps 3 and 4 the directory structure should look like this :
+3. Create new folders named after the image classes in cifar-10 dataset i.e. Airplane, Automobile, cat,....., truck and copy the respectvie images from train folder and test folder to these folders accordingly.
+>***Note** : There are some images which are different but have the same name in the given dataset.*
+4. Paste the `renamer.sh` in each of the folders and edit the line number 5 in it for the respective class. This will rename all the images in it appropriately.
+```
+|-- cifar
+|	|-- train
+|	|-- test
+|	|-- airplane
+|	|	|-- ...(all airplane images)
+|	|	|-- ...renamer.sh
+|	|-- automobile
+|	|	|-- ...(all automobile images)
+|	|	|-- ...renamer.sh
+|	|-- ...(rest of the classes)
+|	|-- truck
+|	|	|-- ...(all truck images)
+|	|	|-- ...renamer.sh
+```
+5. Now separate the train and test sets.
+6. After following steps 3, 4 and 5 the directory structure should look like this :
 ```
 |-- cifar
 |	|-- train
 │	│	|-- Airplane
-|	|	|	|-- airplane_1.jpg
+|	|	|	|-- 1.jpg
 |	|	|	|-- ...
-|	|	|	|-- airplane_n.jpg 
+|	|	|	|-- n.jpg 
 |	|	|-- ...
 |	|	|-- Truck
-|	|	|	|-- Truck_1.jpg
+|	|	|	|-- 1.jpg
 |	|	|	|-- ...
-|	|	|	|-- Truck_n.jpg
+|	|	|	|-- n.jpg
 │	|-- test
 │	│	|-- Airplane
-|	|	|	|-- airplane1.jpg
+|	|	|	|-- n+1.jpg
 |	|	|	|-- same as the "train" folder.
 ```
->***Note** : There are some images which are different but have the same name in the given dataset.*
-5. Run `renamer.sh` to rename the images in dataset appropriately.
-6. Now the data is ready for the use.
+7. Now the data is ready for the use.
+
+#### Training models
+All the models inside the **models** folder are trained on **colab** using different network structures and you can load them using keras and find its summary. The training file for colab is [cifar10_colab_train.ipynb](https://github.com/AtharvaKalsekar/Hide_and_Seek/blob/master/cifar10_colab_train.ipynb "cifar10_colab_train.ipynb") . Also [trainer.py](https://github.com/AtharvaKalsekar/Hide_and_Seek/blob/master/trainer.py "trainer.py") can be used for training on local machine.
+
+#### Testing models
+The models can be tested and examined using [testing_model.py](https://github.com/AtharvaKalsekar/Hide_and_Seek/blob/master/testing_model.py "testing_model.py"). This results in class prediction and localization of the test image.
+
+#### Results
+The classification accuracy is not so good. It has a validation accuracy of 78.32%. (Better classification can be obtained if more data is available).
+The localization has good accuracy.

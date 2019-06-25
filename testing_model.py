@@ -5,11 +5,11 @@ from bbox_generator.CAM import get_CAM
 from bbox_generator.B_BOX import get_bbox
 
 
-model = load_model('custom_3_16062019.h5')
+model = load_model('./models/cnn_10042019_colab.h5')
 
 
-image_path  = './test_images/test_airplane_1.jpeg'
-image_class = 'airplane'
+image_path  = 'test_ship_2.jpeg'
+image_class = 'ship'
 
 #print(model.summary())
 

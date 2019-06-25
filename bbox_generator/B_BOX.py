@@ -44,5 +44,6 @@ def get_bbox(image , original_image):
     
     cv2.rectangle(original_image,(x_top_left,y_top_left),(x_bottom_right,y_bottom_right),(0,255,0),2)
     cv2.imshow("b_boxes",original_image)
+    cv2.imwrite("airplane_bbox.jpg",original_image)
     cv2.waitKey()  
     cv2.destroyAllWindows()

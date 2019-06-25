@@ -2,8 +2,8 @@ from keras import models
 from keras import layers
 from keras import optimizers
 from keras.preprocessing.image import ImageDataGenerator
-import accessing_dirs_test
-from IDG import DataGenerator
+from dataset_helpers.IDG import DataGenerator
+from dataset_helpers.accessing_dir import get_partition_and_labels
 from keras.layers import Conv2D, MaxPooling2D, Dense, GlobalAveragePooling2D, Activation
 
 image_size = 32

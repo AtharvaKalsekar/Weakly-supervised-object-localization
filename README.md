@@ -65,6 +65,6 @@ The models can be tested and examined using [testing_model.py](https://github.co
 The classification accuracy is not so good. It has a validation accuracy of 78.32%. (Better classification can be obtained if more data is available).
 The localization has good accuracy.
 
-![airplane_heatmap.jpg](https://github.com/AtharvaKalsekar/Hide_and_Seek/blob/master/test_image_results/airplane_heatmap.jpg)
+<center>(https://github.com/AtharvaKalsekar/Hide_and_Seek/blob/master/test_image_results/airplane_heatmap.jpg)</center>
 
 ![airplane_bbox.jpg](https://github.com/AtharvaKalsekar/Hide_and_Seek/blob/master/test_image_results/airplane_bbox.jpg)

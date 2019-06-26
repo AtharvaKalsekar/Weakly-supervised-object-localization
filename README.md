@@ -67,5 +67,6 @@ The localization has good accuracy.
 
 | | | |
 |:-------------------------:|:-------------------------:|:-------------------------:|
+|<img src="https://github.com/AtharvaKalsekar/Hide_and_Seek/blob/master/test_images/test_airplane_1.jpeg">  airplane |  <img src="https://github.com/AtharvaKalsekar/Hide_and_Seek/blob/master/test_images/test_bird_1.jpeg"> bird |<img src="https://github.com/AtharvaKalsekar/Hide_and_Seek/blob/master/test_images/test_ship_2.jpeg"> ship
 |<img src="https://github.com/AtharvaKalsekar/Hide_and_Seek/blob/master/test_image_results/airplane_heatmap.jpg">  airplane heatmap |  <img src="https://github.com/AtharvaKalsekar/Hide_and_Seek/blob/master/test_image_results/bird_heatmap.jpg"> bird heatmap|<img src="https://github.com/AtharvaKalsekar/Hide_and_Seek/blob/master/test_image_results/ship_heatmap.jpg"> ship heatmap|
 |<img src="https://github.com/AtharvaKalsekar/Hide_and_Seek/blob/master/test_image_results/airplane_bbox.jpg"> airplane bbox |  <img src="https://github.com/AtharvaKalsekar/Hide_and_Seek/blob/master/test_image_results/bird_bbox.jpg"> bird bbox |<img src="https://github.com/AtharvaKalsekar/Hide_and_Seek/blob/master/test_image_results/ship_bbox.jpg"> ship bbox |
